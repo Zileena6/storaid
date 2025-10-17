@@ -1,4 +1,5 @@
 import Button from './components/Button';
+import NavLinks from './components/nav/NavLinks';
 
 function App() {
   return (

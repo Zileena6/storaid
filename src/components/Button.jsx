@@ -2,7 +2,7 @@ const Button = ({
   children,
   onClick,
   type = 'button',
-  variant = 'lightBg',
+  variant = 'light-bg',
 }) => {
   return (
     <button type={type} onClick={onClick} className={`btn btn-${variant}`}>

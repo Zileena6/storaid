@@ -58,7 +58,7 @@ h6 {
   font-weight: 700;
 }
 
-/* MARK: Button */
+/* MARK: Buttons */
 
 .btn {
   background-color: var(--accent);
@@ -70,13 +70,38 @@ h6 {
   font-weight: 600;
   text-transform: capitalize;
   padding: 0.5rem 1.5rem;
+
+  .btn-light-bg:hover {
+    color: var(--primary);
+    background-color: var(--secondary);
+  }
+
+  .btn-dark-bg:hover {
+    background-color: var(--primary);
+  }
 }
 
-.btn-lightBg:hover {
-  color: var(--primary);
-  background-color: var(--secondary);
-}
+/* MARK: NavLinks */
 
-.btn-darkBg:hover {
-  background-color: var(--primary);
+.navlinks {
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.125rem;
+    list-style: none;
+  }
+
+  .navlink {
+    color: var(--secondary);
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+  }
+
+  .navlink:hover {
+    color: var(--accent);
+  }
 }
