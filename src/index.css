@@ -57,3 +57,26 @@ h6 {
   font-size: 1.25rem;
   font-weight: 700;
 }
+
+/* MARK: Button */
+
+.btn {
+  background-color: var(--accent);
+  color: var(--secondary);
+  border: none;
+  border-radius: 0.3rem;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-lightBg:hover {
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+.btn-darkBg:hover {
+  background-color: var(--primary);
+}
