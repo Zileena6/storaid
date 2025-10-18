@@ -228,3 +228,56 @@ h6 {
     }
   }
 }
+
+/* MARK: ReviewCard */
+
+.review-card {
+  background: var(--Primary);
+  color: var(--secondary);
+  width: 44ch;
+  padding: 1.6rem;
+  border-radius: 0.625rem;
+
+  /* border: 2px solid var(--color-2); */
+
+  .rating-stars {
+    font-size: 1.4rem;
+  }
+
+  .review-post {
+    font-family: 'Inter', sans-serif;
+    padding: 1rem 0 1.5rem 0;
+  }
+
+  .user-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0.5rem 0;
+
+    .author-info {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+
+      .avatar {
+        background-color: #c4c4c4;
+        width: 4.4rem;
+        height: 4.4rem;
+        border-radius: 50%;
+      }
+
+      .user {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+
+        p {
+          font-family: 'Inter', sans-serif;
+          text-transform: capitalize;
+          font-size: 0.87rem;
+        }
+      }
+    }
+  }
+}
