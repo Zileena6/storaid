@@ -1,12 +1,12 @@
 const Button = ({
-  children,
+  btnText,
   onClick,
   type = 'button',
   variant = 'light-bg',
 }) => {
   return (
     <button type={type} onClick={onClick} className={`btn btn-${variant}`}>
-      {children}
+      {btnText}
     </button>
   );
 };

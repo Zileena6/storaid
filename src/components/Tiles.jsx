@@ -1,5 +1,5 @@
 const Tiles = () => {
-  // ! unfinished!
+  // TODO: unfinished!
   return (
     <div className='tiles-container'>
       <h5>Title</h5>
