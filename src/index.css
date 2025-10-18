@@ -69,7 +69,7 @@ h6 {
   font-size: 0.94rem;
   font-weight: 600;
   text-transform: capitalize;
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem 1.4rem;
 
   .btn-light-bg:hover {
     color: var(--primary);
@@ -146,5 +146,85 @@ h6 {
 
   &:hover {
     border: 3px solid var(--accent);
+  }
+}
+
+/* MARK: PriceList */
+
+.price-card {
+  width: 33ch;
+  background: var(--color-4);
+  border: 3px solid var(--color-2);
+  border-radius: 0.625rem;
+  padding: 2.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+
+  .price-span {
+    display: flex;
+    gap: 1.3rem;
+
+    span {
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding-top: 0.5rem;
+    }
+
+    h3 {
+      color: var(--accent);
+    }
+
+    .month {
+      display: flex;
+      align-items: self-end;
+      padding-bottom: 0.8rem;
+    }
+  }
+
+  p {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .line {
+    width: 100%;
+    border-bottom: 1px solid var(--secondary);
+  }
+
+  ul {
+    font-family: 'Inter', sans-serif;
+    padding: 1rem 0;
+    list-style: none;
+
+    li {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      padding-bottom: 0.4rem;
+
+      .check-icon {
+        color: var(--secondary);
+      }
+    }
+  }
+
+  &:hover {
+    background: var(--secondary);
+    color: var(--primary);
+
+    .line {
+      border-bottom: 1px solid var(--primary);
+    }
+
+    .check-icon {
+      color: var(--accent);
+    }
   }
 }
