@@ -129,3 +129,22 @@ h6 {
     background-color: var(--primary);
   }
 }
+
+/* MARK: Tiles */
+
+.tiles-container {
+  width: 34ch;
+  background: var(--primary);
+  border: 3px solid var(--color-2);
+  border-radius: 0.625rem;
+  padding: 0.8rem 1.56rem;
+
+  p {
+    font-family: 'Inter';
+    padding: 0.6rem 0;
+  }
+
+  &:hover {
+    border: 3px solid var(--accent);
+  }
+}
