@@ -1,6 +1,7 @@
 import Button from './components/Button';
 import NavLinks from './components/nav/NavLinks';
 import PriceList from './components/PriceList';
+import ReviewCard from './components/ReviewCard';
 import SocialLinks from './components/social/SocialLinks';
 import Tiles from './components/Tiles';
 
