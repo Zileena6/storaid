@@ -1,3 +1,4 @@
+import BlogCard from './components/BlogCard';
 import Button from './components/Button';
 import NavLinks from './components/nav/NavLinks';
 import PriceList from './components/PriceList';

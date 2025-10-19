@@ -281,3 +281,63 @@ h6 {
     }
   }
 }
+
+/* MARK: BlogCard */
+
+.blog-card {
+  background: var(--secondary);
+  color: var(--primary);
+  width: 45ch;
+  padding: 1.56rem;
+  border-radius: 0.3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  .image-container {
+    background: #c4c4c4;
+    width: 23.7rem;
+    height: 15.8rem;
+    border-radius: 0.3rem;
+  }
+
+  .content-container {
+    padding: 1.25rem 0;
+    font-family: 'Inter', sans-serif;
+
+    .date-stamp {
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+
+      p {
+        font-size: 0.87rem;
+        padding-top: 0.3rem;
+      }
+    }
+
+    h6 {
+      font-family: 'Urbanist', sans-serif;
+      padding: 1.25rem 0;
+    }
+
+    .content {
+      padding-bottom: 1.3rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+  }
+
+  &:hover {
+    background: var(--color-4);
+    color: var(--secondary);
+  }
+}
