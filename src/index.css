@@ -341,3 +341,23 @@ h6 {
     color: var(--secondary);
   }
 }
+
+/* MARK: IconBlock */
+
+.icon-block {
+  width: 69ch;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: end;
+  gap: 1.56rem;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    .description {
+      font-family: 'Inter', sans-serif;
+    }
+  }
+}
