@@ -1,4 +1,4 @@
-import quotes from '../../public/quotes.svg';
+import quotes from '../assets/quotes.svg';
 import { MdStar } from 'react-icons/md';
 
 const ReviewCard = () => {
