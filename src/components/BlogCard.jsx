@@ -1,5 +1,5 @@
 import { FaRegCalendarMinus, FaArrowRight } from 'react-icons/fa6';
-
+// TODO: Unfinished!
 const BlogCard = () => {
   return (
     <div className='blog-card'>

@@ -1,6 +1,8 @@
 import quotes from '../assets/quotes.svg';
 import { MdStar } from 'react-icons/md';
 
+// TODO: Unfinished!
+
 const ReviewCard = () => {
   return (
     <div className='review-card'>

@@ -1,8 +1,8 @@
-import padlock from '../../public/padlock-icon.svg';
-// import duster from '../../public/duster-icon.svg';
-// import moneybag from '../../public/moneybag-icon.svg';
-// import clock from '../../public/clock-icon.svg';
-
+import padlock from '../assets/padlock-icon.svg';
+// import duster from '../assets/duster-icon.svg';
+// import moneybag from '../assets/moneybag-icon.svg';
+// import clock from '../assets/clock-icon.svg';
+// TODO: Unfinished!
 const IconBlock = () => {
   return (
     <>
