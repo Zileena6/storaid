@@ -397,3 +397,35 @@ h6 {
     color: var(--accent);
   }
 }
+
+/* MARK: StatsCard */
+
+.stats-container {
+  background: var(--secondary);
+  border-radius: 0.625rem;
+  padding: 1.6rem 3.5rem;
+  width: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+
+  h2 {
+    color: var(--accent);
+    line-height: 1.2;
+  }
+
+  p {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary);
+    text-transform: capitalize;
+  }
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
