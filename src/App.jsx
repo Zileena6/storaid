@@ -2,6 +2,7 @@ import BlogCard from './components/BlogCard';
 import Button from './components/Button';
 import IconBlock from './components/IconBlock';
 import InputField from './components/InputField';
+import LogoBanner from './components/LogoBanner';
 import NavLinks from './components/nav/NavLinks';
 import PriceList from './components/PriceList';
 import ReviewCard from './components/ReviewCard';
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <p>add pages</p>
+      <LogoBanner />
     </>
   );
 }

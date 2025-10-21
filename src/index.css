@@ -429,3 +429,20 @@ h6 {
     align-items: center;
   }
 }
+
+/* MARK: LogoBanner */
+
+.logo-banner {
+  background: var(--color-3);
+  width: 100%;
+  padding: 2.4rem 0;
+
+  display: flex;
+  justify-content: center;
+
+  .logo-container {
+    max-width: 1364px;
+    display: flex;
+    gap: 4.3rem;
+  }
+}
