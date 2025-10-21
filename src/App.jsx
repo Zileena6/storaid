@@ -13,7 +13,6 @@ function App() {
   return (
     <>
       <p>add pages</p>
-      <StatsCard />
     </>
   );
 }

@@ -1,5 +1,3 @@
-// TODO: In progress...
-
 const StatsCard = () => {
   return (
     <div className='stats-container'>
