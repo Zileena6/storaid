@@ -1,6 +1,6 @@
 import BlogCard from './components/BlogCard';
 import Button from './components/Button';
-import IconBlock from './components/IconBlock';
+import IconBlock from './components/icon/IconBlock';
 import InputField from './components/InputField';
 import LogoBanner from './components/LogoBanner';
 import NavLinks from './components/nav/NavLinks';
@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <p>add pages</p>
-      <LogoBanner />
+      <IconBlock />
     </>
   );
 }
