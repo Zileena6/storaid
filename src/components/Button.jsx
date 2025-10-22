@@ -5,11 +5,9 @@ const Button = ({
   variant = 'light-bg',
 }) => {
   return (
-    <div className='btn-wrapper'>
-      <button type={type} onClick={onClick} className={`btn btn-${variant}`}>
-        {btnText}
-      </button>
-    </div>
+    <button type={type} onClick={onClick} className={`btn btn-${variant}`}>
+      {btnText}
+    </button>
   );
 };
 export default Button;

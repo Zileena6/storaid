@@ -1,21 +1,23 @@
-import BlogCard from './components/BlogCard';
-import Button from './components/Button';
-import IconBlock from './components/icon/IconBlock';
-import InputField from './components/InputField';
-import LogoBanner from './components/LogoBanner';
-import NavLinks from './components/nav/NavLinks';
-import PriceList from './components/PriceList';
-import ReviewCard from './components/ReviewCard';
-import SocialLinks from './components/social/SocialLinks';
-import StatsCard from './components/StatsCard';
-import Tiles from './components/Tiles';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Booking from './pages/Booking';
+import Header from './components/header/Header';
 
 function App() {
   return (
-    <>
-      <p>add pages</p>
-      <IconBlock />
-    </>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/booking' element={<Booking />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

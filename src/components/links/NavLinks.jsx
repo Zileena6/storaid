@@ -1,16 +1,17 @@
+import { Link } from 'react-router-dom';
 import { navLinks } from './links.js';
 
 const NavLinks = () => {
   return (
     <div className='navlinks'>
       <ul>
-        {navLinks.map((link) => {
+        {navLinks.map((link, i) => {
           return (
             <>
-              <li key={link.id}>
-                <a href={link.href} className='navlink'>
+              <li key={i}>
+                <Link to={link.href} className='navlink'>
                   {link.text}
-                </a>
+                </Link>
               </li>
             </>
           );
