@@ -1,12 +1,12 @@
-import { socialLinks } from './links';
+import { socialLinks } from './socialLinks';
 
-const SocialLinks = () => {
+const SocialList = () => {
   return (
     <div className='sociallinks'>
       <ul>
         {/* eslint-disable-next-line no-unused-vars */}
-        {socialLinks.map(({ id, href, icon: Icon }) => (
-          <li key={id}>
+        {socialLinks.map(({ i, href, icon: Icon }) => (
+          <li key={i}>
             <a
               href={href}
               target='_blank'
@@ -21,4 +21,4 @@ const SocialLinks = () => {
     </div>
   );
 };
-export default SocialLinks;
+export default SocialList;
