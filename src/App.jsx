@@ -5,6 +5,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Booking from './pages/Booking';
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/booking' element={<Booking />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

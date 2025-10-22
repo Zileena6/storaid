@@ -59,7 +59,6 @@ h6 {
 }
 
 /* MARK: Buttons */
-
 .btn {
   background-color: var(--accent);
   color: var(--secondary);
@@ -82,7 +81,6 @@ h6 {
 }
 
 /* MARK: NavLinks */
-
 .navlinks {
   ul {
     display: flex;
@@ -107,7 +105,6 @@ h6 {
 }
 
 /* MARK: SocialLinks */
-
 .sociallinks {
   ul {
     display: flex;
@@ -131,7 +128,6 @@ h6 {
 }
 
 /* MARK: Tiles */
-
 .tiles-container {
   width: 34ch;
   background: var(--primary);
@@ -150,7 +146,6 @@ h6 {
 }
 
 /* MARK: PriceList */
-
 .price-card {
   width: 33ch;
   background: var(--color-4);
@@ -230,15 +225,12 @@ h6 {
 }
 
 /* MARK: ReviewCard */
-
 .review-card {
   background: var(--Primary);
   color: var(--secondary);
   width: 44ch;
   padding: 1.6rem;
   border-radius: 0.625rem;
-
-  /* border: 2px solid var(--color-2); */
 
   .rating-stars {
     font-size: 1.4rem;
@@ -283,7 +275,6 @@ h6 {
 }
 
 /* MARK: BlogCard */
-
 .blog-card {
   background: var(--secondary);
   color: var(--primary);
@@ -343,7 +334,6 @@ h6 {
 }
 
 /* MARK: IconBlock */
-
 .icon-block {
   width: 69ch;
   padding: 0.6rem 1rem;
@@ -363,7 +353,6 @@ h6 {
 }
 
 /* InputField */
-
 .input-container {
   font-family: 'Inter', sans-serif;
   font-size: 1.125rem;
@@ -395,7 +384,6 @@ h6 {
 }
 
 /* MARK: StatsCard */
-
 .stats-container {
   background: var(--secondary);
   border-radius: 0.625rem;
@@ -427,7 +415,6 @@ h6 {
 }
 
 /* MARK: LogoBanner */
-
 .logo-banner {
   background: var(--color-3);
   width: 100%;
@@ -444,7 +431,6 @@ h6 {
 }
 
 /* MARK: Header */
-
 header {
   display: flex;
   flex-direction: column;
@@ -479,5 +465,44 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+/* MARK: Hero */
+/* MARK: About */
+/* MARK: Services */
+/* MARK: Testimonials */
+/* MARK: Marketing */
+/* MARK: PricingPlan */
+/* MARK: (PerfectFit?) */
+/* MARK: Blog */
+/* MARK: Newsletter */
+
+/* MARK: Footer */
+
+footer {
+  background: var(--secondary);
+
+  .footer-container {
+    max-width: 1364px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    color: var(--primary);
+    padding: 2.25rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .terms-policy {
+      display: flex;
+      gap: 3rem;
+
+      p {
+        display: flex;
+        align-items: center;
+        gap: 0.56rem;
+      }
+    }
   }
 }
