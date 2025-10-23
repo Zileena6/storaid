@@ -58,6 +58,10 @@ h6 {
   font-weight: 700;
 }
 
+p {
+  font-family: 'Inter', sans-serif;
+}
+
 /* MARK: Buttons */
 .btn {
   background-color: var(--accent);
@@ -182,7 +186,6 @@ h6 {
   }
 
   p {
-    font-family: 'Inter', sans-serif;
     text-align: center;
     padding-bottom: 1rem;
   }
@@ -265,7 +268,6 @@ h6 {
         gap: 0.3rem;
 
         p {
-          font-family: 'Inter', sans-serif;
           text-transform: capitalize;
           font-size: 0.87rem;
         }
@@ -401,7 +403,6 @@ h6 {
   }
 
   p {
-    font-family: 'Inter', sans-serif;
     color: var(--primary);
     text-transform: capitalize;
   }
@@ -492,7 +493,6 @@ header {
       }
 
       p {
-        font-family: 'Inter', sans-serif;
         color: var(--primary);
         padding-bottom: 1.25rem;
       }
@@ -504,6 +504,49 @@ header {
   }
 }
 /* MARK: About */
+.about-container {
+  max-width: 1364px;
+  margin: 0 auto;
+  padding: 6rem 0;
+  display: flex;
+  gap: 1.7rem;
+
+  .image-container {
+    position: relative;
+
+    .img {
+      width: 42rem;
+      height: 27.6rem;
+      background: #c4c4c4;
+      border: 5px solid var(--color-2);
+    }
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      color: var(--accent);
+    }
+    h3 {
+      line-height: 100%;
+      padding: 1.3rem 0;
+    }
+    p {
+      padding-bottom: 1.3rem;
+    }
+  }
+
+  .tiles {
+    display: flex;
+    gap: 1.3rem;
+  }
+
+  .info-container {
+  }
+}
+
 /* MARK: Services */
 /* MARK: Testimonials */
 /* MARK: Marketing */
@@ -520,7 +563,7 @@ footer {
   .footer-container {
     max-width: 1364px;
     margin: 0 auto;
-    font-family: 'Inter', sans-serif;
+
     color: var(--primary);
     padding: 2.25rem 0;
 
