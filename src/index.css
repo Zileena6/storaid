@@ -469,6 +469,40 @@ header {
 }
 
 /* MARK: Hero */
+.hero-section {
+  background: var(--accent-3);
+
+  .hero-container {
+    max-width: 1364px;
+    margin: 0 auto;
+    padding-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+
+    .content-container {
+      max-width: 44rem;
+
+      h4 {
+        color: var(--accent);
+      }
+
+      h1 {
+        line-height: 100%;
+        padding: 1.25rem 0;
+      }
+
+      p {
+        font-family: 'Inter', sans-serif;
+        color: var(--primary);
+        padding-bottom: 1.25rem;
+      }
+    }
+
+    .image-container {
+      max-height: 33.4rem;
+    }
+  }
+}
 /* MARK: About */
 /* MARK: Services */
 /* MARK: Testimonials */
@@ -488,7 +522,7 @@ footer {
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
     color: var(--primary);
-    padding: 2.25rem;
+    padding: 2.25rem 0;
 
     display: flex;
     justify-content: space-between;
