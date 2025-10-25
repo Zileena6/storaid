@@ -17,7 +17,7 @@ const OurServices = () => {
         <div className='detail-content'>
           <Tiles ids={[3, 4]} />
         </div>
-        <div className='image-container'></div>
+        <div className='image-container'>{/* Find suitable image */}</div>
         <div className='detail-content'>
           <Tiles ids={[5, 6]} />
         </div>
