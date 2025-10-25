@@ -1,6 +1,6 @@
 const StatsCard = () => {
   return (
-    <div className='stats-container'>
+    <div className='stats-card'>
       <div className='block'>
         <h2>12+</h2>
         <p>years of experience</p>
