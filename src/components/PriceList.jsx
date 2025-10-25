@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from './Button';
 import { FaCircleCheck } from 'react-icons/fa6';
 
@@ -40,7 +41,9 @@ const PriceList = () => {
           Etiam eget libero non ligula
         </li>
       </ul>
-      <Button btnText={'Rent Now'} />
+      <Link to='/booking'>
+        <Button btnText={'Rent Now'} />
+      </Link>
     </div>
   );
 };
