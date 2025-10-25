@@ -30,6 +30,7 @@
   --color-4: #f1ffea;
 }
 
+/* MARK: Globals */
 h1 {
   font-family: 'Inter', sans-serif;
   font-size: 5rem;
@@ -229,7 +230,7 @@ p {
 
 /* MARK: ReviewCard */
 .review-card {
-  background: var(--Primary);
+  background: var(--primary);
   color: var(--secondary);
   width: 44ch;
   padding: 1.6rem;
@@ -585,7 +586,7 @@ header {
   margin: 0 auto;
   padding: 5.8rem 0;
 
-  h4 {
+  .section-title {
     /*
     Due to insufficient contrast ratio, I chose to 
     add a background to the section title (h4).
@@ -601,12 +602,12 @@ header {
     align-items: center;
     padding-bottom: 1rem;
 
-    h3 {
+    .title {
       line-height: 100%;
       padding: 0.5rem 0;
     }
 
-    .text {
+    .description {
       max-width: 43rem;
     }
   }
@@ -632,6 +633,52 @@ header {
 }
 
 /* MARK: Testimonials */
+.overlay {
+  border-image: linear-gradient(rgba(18, 55, 42, 0.8)) fill 1;
+}
+
+.testimonials-container {
+  background-image: url('./assets/testimonials-bg-img.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5.6rem 0;
+
+  .testimonials-intro {
+    max-width: 1364px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .section-title {
+      color: var(--accent);
+    }
+
+    .title {
+      color: var(--primary);
+    }
+
+    .description {
+      color: var(--primary);
+      max-width: 66rem;
+      text-align: center;
+      padding-bottom: 1.75rem;
+    }
+  }
+
+  .review-cards {
+    max-width: 1364px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+  }
+}
+
 /* MARK: Marketing */
 /* MARK: PricingPlan */
 /* MARK: (PerfectFit?) */
