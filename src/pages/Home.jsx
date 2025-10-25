@@ -3,6 +3,7 @@ import Blog from '../components/blog/Blog';
 import Hero from '../components/hero/Hero';
 import LogoBanner from '../components/LogoBanner';
 import Marketing from '../components/marketing/Marketing';
+import Newsletter from '../components/newsletter/Newsletter';
 import PerfectFit from '../components/perfectFit/PerfectFit';
 import PricingPlan from '../components/pricingPlan/PricingPlan';
 import OurServices from '../components/services/OurServices';
@@ -20,6 +21,7 @@ const Home = () => {
       <PricingPlan />
       <PerfectFit />
       <Blog />
+      <Newsletter />
     </div>
   );
 };
