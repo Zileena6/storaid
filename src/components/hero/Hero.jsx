@@ -1,5 +1,6 @@
 import Button from '../Button';
 import heroImage from '../../assets/hero-image.svg';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -14,7 +15,9 @@ const Hero = () => {
             lobortis, libero at iaculis luctus, nisi ex pellentesque nisi, at
             euismod sem ipsum ac dolor.
           </p>
-          <Button btnText={'Discover More'} />
+          <Link to='/services'>
+            <Button btnText={'Discover More'} variant='dark-bg' />
+          </Link>
         </div>
         <div className='image-container'>
           <img src={heroImage} alt='silhouette of a man' />

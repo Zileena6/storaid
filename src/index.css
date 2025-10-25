@@ -69,8 +69,9 @@ p {
   border: none;
   border-radius: 0.3rem;
   font-family: 'Urbanist', sans-serif;
-  font-size: 0.94rem;
+  font-size: 1rem;
   font-weight: 600;
+  line-height: 25px;
   text-transform: capitalize;
   padding: 0.6rem 1.4rem;
 }
@@ -139,7 +140,7 @@ p {
   border-radius: 0.625rem;
   padding: 0.8rem 1.56rem;
 
-  p {
+  .description {
     font-family: 'Inter';
     padding: 0.6rem 0;
   }
@@ -386,7 +387,7 @@ p {
 }
 
 /* MARK: StatsCard */
-.stats-container {
+.stats-card {
   background: var(--secondary);
   border-radius: 0.625rem;
   padding: 1.6rem 2.8rem;
@@ -514,11 +515,20 @@ header {
   .image-container {
     position: relative;
 
-    .img {
+    .stats-card {
+      position: absolute;
+      bottom: 1rem;
+      left: 1.8rem;
+      z-index: 2;
+    }
+
+    .image {
+      position: relative;
       width: 42rem;
       height: 27.6rem;
       background: #c4c4c4;
       border: 5px solid var(--color-2);
+      z-index: 1;
     }
   }
 
@@ -527,14 +537,22 @@ header {
     flex-direction: column;
 
     h4 {
+      background: var(--secondary);
       color: var(--accent);
+      /*
+      Due to insufficient contrast ratio, 
+      I chose to add a background to the 
+      section title (h4).
+      */
     }
+
     h3 {
       line-height: 100%;
-      padding: 1.3rem 0;
+      padding: 0.5rem 0;
     }
-    p {
-      padding-bottom: 1.3rem;
+
+    .text {
+      padding: 0.5rem 1rem 0.5rem 0;
     }
   }
 
@@ -543,7 +561,22 @@ header {
     gap: 1.3rem;
   }
 
-  .info-container {
+  .discover-more {
+    padding: 3rem 0 3.4rem 0;
+    display: flex;
+    align-items: center;
+    gap: 5.5rem;
+
+    .info-container {
+      display: flex;
+      gap: 2rem;
+
+      .more-info {
+        h5 {
+          text-transform: capitalize;
+        }
+      }
+    }
   }
 }
 
@@ -556,7 +589,6 @@ header {
 /* MARK: Newsletter */
 
 /* MARK: Footer */
-
 footer {
   background: var(--secondary);
 
