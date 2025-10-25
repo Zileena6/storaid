@@ -20,7 +20,7 @@ const AboutUs = () => {
           blandit nisi, non sodales augue. Phasellus eget elit gravida.
         </p>
         <div className='tiles'>
-          <Tiles />
+          <Tiles ids={[1, 2]} />
         </div>
         <div className='discover-more'>
           <Link to='/about'>
