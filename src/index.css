@@ -741,7 +741,25 @@ header {
   }
 }
 
-/* MARK: (PerfectFit?) */
+/* MARK: PerfectFit */
+.section-container {
+  background: var(--accent-3);
+  color: var(--primary);
+  padding: 6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75rem;
+
+  .title,
+  .description {
+    text-align: center;
+    padding: 0 35rem;
+  }
+}
+
 /* MARK: Blog */
 /* MARK: Newsletter */
 
