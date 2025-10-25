@@ -1,14 +1,16 @@
-import { aboutTiles } from './tileContent';
+import { tileContent } from './tileContent';
 
-const Tiles = () => {
+const Tiles = ({ ids }) => {
   return (
     <>
-      {aboutTiles.map(({ i, title, description }) => (
-        <div key={i} className='tiles-container'>
-          <h5 className='title'>{title}</h5>
-          <p className='description'>{description}</p>
-        </div>
-      ))}
+      {tileContent
+        .filter((tile) => ids.includes(tile.id))
+        .map(({ id, title, description }) => (
+          <div key={id} className='tiles-container'>
+            <h5 className='title'>{title}</h5>
+            <p className='description'>{description}</p>
+          </div>
+        ))}
     </>
   );
 };
