@@ -1,4 +1,5 @@
 import AboutUs from '../components/about/AboutUs';
+import Blog from '../components/blog/Blog';
 import Hero from '../components/hero/Hero';
 import LogoBanner from '../components/LogoBanner';
 import Marketing from '../components/marketing/Marketing';
@@ -18,6 +19,7 @@ const Home = () => {
       <Marketing />
       <PricingPlan />
       <PerfectFit />
+      <Blog />
     </div>
   );
 };
