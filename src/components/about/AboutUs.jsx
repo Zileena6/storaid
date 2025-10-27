@@ -1,6 +1,6 @@
 import Tiles from '../tiles/Tiles';
 import Button from '../Button';
-import StatsCard from '../StatsCard';
+import StatsCard from './StatsCard';
 import phone from '../../assets/phone-icon.svg';
 import { Link } from 'react-router-dom';
 

@@ -1,4 +1,4 @@
-import PriceList from '../PriceList';
+import PriceList from './PriceList';
 
 const PricingPlan = () => {
   return (
