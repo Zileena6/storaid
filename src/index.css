@@ -745,18 +745,22 @@ header {
 .section-container {
   background: var(--accent-3);
   color: var(--primary);
-  padding: 6rem;
+  padding: 6rem 0;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.75rem;
+  .content-container {
+    max-width: 1364px;
+    margin: 0 auto;
 
-  .title,
-  .description {
-    text-align: center;
-    padding: 0 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+
+    .title,
+    .description {
+      text-align: center;
+      padding: 0 10rem;
+    }
   }
 }
 
@@ -816,6 +820,10 @@ header {
 
       .input-field {
         width: 33rem;
+      }
+
+      .btn {
+        padding: 1.15rem;
       }
     }
   }
