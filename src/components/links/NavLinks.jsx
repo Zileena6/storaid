@@ -5,15 +5,13 @@ const NavLinks = () => {
   return (
     <div className='navlinks'>
       <ul>
-        {navLinks.map((link, i) => {
+        {navLinks.map((link, id) => {
           return (
-            <>
-              <li key={i}>
-                <Link to={link.href} className='navlink'>
-                  {link.text}
-                </Link>
-              </li>
-            </>
+            <li key={id}>
+              <Link to={link.href} className='navlink'>
+                {link.text}
+              </Link>
+            </li>
           );
         })}
       </ul>

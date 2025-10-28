@@ -505,6 +505,23 @@ header {
     }
   }
 }
+
+/* MARK: subHero */
+.subpage-hero-section {
+  background: var(--accent-3);
+
+  .subpage-hero-content {
+    max-width: 1364px;
+    margin: 0 auto;
+    padding: 9rem 0;
+
+    .description {
+      color: var(--color-4);
+      max-width: 50%;
+    }
+  }
+}
+
 /* MARK: About */
 .about-container {
   max-width: 1364px;
@@ -678,6 +695,10 @@ header {
 .marketing-container {
   background: var(--color-3);
   padding: 6rem 0;
+
+  &.white {
+    background: var(--primary);
+  }
 
   .marketing-content {
     max-width: 1364px;
@@ -854,5 +875,33 @@ footer {
         gap: 0.56rem;
       }
     }
+  }
+}
+
+/* MARK: Error */
+.error-container {
+  background: var(--accent-3);
+  width: 100%;
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    color: var(--primary);
+  }
+
+  .title {
+    color: var(--accent);
+    text-transform: capitalize;
+  }
+
+  .description {
+    color: var(--primary);
+    max-width: 40rem;
+    text-align: center;
+    padding-bottom: 1.56rem;
   }
 }

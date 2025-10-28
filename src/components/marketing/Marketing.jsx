@@ -1,8 +1,8 @@
 import IconBlock from '../icon/IconBlock';
 
-const Marketing = () => {
+const Marketing = ({ variant = null }) => {
   return (
-    <section className='marketing-container'>
+    <section className={`marketing-container ${variant} `}>
       <div className='marketing-content'>
         <h4 className='section-title'>Why Choose Us</h4>
         <div className='marketing-intro'>

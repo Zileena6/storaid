@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Booking from './pages/Booking';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import Error from './pages/Error';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/services' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/booking' element={<Booking />} />
+        <Route path='/error' element={<Error />} />
       </Routes>
       <Footer />
     </BrowserRouter>

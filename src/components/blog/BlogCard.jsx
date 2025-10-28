@@ -4,7 +4,7 @@ const BlogCard = () => {
   return (
     <div className='blog-card'>
       <div className='image-container'>
-        <img src='' alt='' />
+        <img src='#' alt='' />
       </div>
       <div className='content-container'>
         <div className='date-stamp'>
@@ -16,7 +16,7 @@ const BlogCard = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a sem
           magna. Etiam ac odio sit amet lorem…
         </p>
-        <a href=''>
+        <a href='#'>
           Read more <FaArrowRight />
         </a>
       </div>
