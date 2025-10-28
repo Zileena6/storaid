@@ -7,7 +7,7 @@ import Newsletter from '../components/newsletter/Newsletter';
 import PerfectFit from '../components/perfectFit/PerfectFit';
 import PricingPlan from '../components/pricingPlan/PricingPlan';
 import OurServices from '../components/services/OurServices';
-import Testimonials from '../components/testimonials/testimonials';
+import Testimonials from '../components/testimonials/Testimonials';
 
 const Home = () => {
   return (

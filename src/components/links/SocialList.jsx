@@ -5,8 +5,8 @@ const SocialList = () => {
     <div className='sociallinks'>
       <ul>
         {/* eslint-disable-next-line no-unused-vars */}
-        {socialLinks.map(({ i, title, href, icon: Icon }) => (
-          <li key={i}>
+        {socialLinks.map(({ id, title, href, icon: Icon }) => (
+          <li key={id}>
             <a
               aria-label={title}
               href={href}
