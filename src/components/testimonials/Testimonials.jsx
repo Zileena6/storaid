@@ -1,8 +1,8 @@
 import ReviewCard from './ReviewCard';
 
-const Testimonials = () => {
+const Testimonials = ({ variant = null }) => {
   return (
-    <section className='testimonials-container overlay'>
+    <section className={`testimonials-container overlay ${variant}`}>
       <div className='testimonials-intro'>
         <h4 className='section-title'>Testimonials</h4>
         <h3 className='title'>See What Our Client Have to Say</h3>
