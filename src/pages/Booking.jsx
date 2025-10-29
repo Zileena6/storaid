@@ -1,3 +1,4 @@
+import FAQ from '../components/faq/FAQ';
 import SubPageHero from '../components/hero/SubPageHero';
 import Marketing from '../components/marketing/Marketing';
 import Newsletter from '../components/newsletter/Newsletter';
@@ -10,7 +11,7 @@ const Booking = () => {
       {/* booking unit */}
       <Marketing />
       <PerfectFit />
-      {/* FAQs */}
+      <FAQ />
       <Newsletter />
     </div>
   );

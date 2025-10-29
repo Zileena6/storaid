@@ -1,4 +1,4 @@
-import IconBlock from '../icon/IconBlock';
+import IconBlock from '../marketing/IconBlock';
 
 const Marketing = ({ variant = null }) => {
   return (
