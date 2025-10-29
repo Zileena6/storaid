@@ -1,3 +1,4 @@
+import FAQ from '../components/faq/FAQ';
 import SubPageHero from '../components/hero/SubPageHero';
 import Newsletter from '../components/newsletter/Newsletter';
 
@@ -7,7 +8,7 @@ const Contact = () => {
       <SubPageHero id={'contact'} />
       {/* Get in touch */}
       {/* Find us on */}
-      {/* FAQs */}
+      <FAQ />
       <Newsletter />
     </div>
   );

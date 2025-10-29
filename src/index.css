@@ -846,30 +846,31 @@ header {
   }
 
   .accordion {
-    width: 50%;
+    width: 42rem;
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
 
-    .question {
-      background-color: var(--color-2);
-      color: var(--secondary);
-      font-size: 1.125rem;
-      font-weight: 600;
-      padding: 0.9rem;
-      border-radius: 5px;
+    .accordion-item {
+      .item-title {
+        background-color: var(--color-2);
+        color: var(--secondary);
+        font-size: 1.125rem;
+        font-weight: 600;
+        padding: 0.9rem;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
 
-      display: flex;
-      justify-content: space-between;
-
-      &:hover {
-        background-color: var(--accent);
-        color: var(--primary);
+        &.active {
+          background-color: var(--accent);
+          color: var(--primary);
+        }
       }
-    }
 
-    .answer {
-      padding: 0 3rem;
+      .item-description {
+        padding: 1.4rem 3rem 0 3rem;
+      }
     }
   }
 }

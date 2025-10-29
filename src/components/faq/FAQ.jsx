@@ -1,6 +1,21 @@
-import { FaChevronDown } from 'react-icons/fa6';
+import { useEffect, useState } from 'react';
+import AccordionItem from './AccordionItem';
 
 const FAQ = () => {
+  const [accordion, setAccordion] = useState([]);
+
+  const fetchFaq = async () => {
+    const res = await fetch(
+      'https://win25-jsf-assignment.azurewebsites.net/api/faqs'
+    );
+    const data = await res.json();
+    setAccordion(data);
+  };
+
+  useEffect(() => {
+    fetchFaq();
+  }, []);
+
   return (
     <section className='faqs-container'>
       <div className='faqs-content'>
@@ -11,73 +26,10 @@ const FAQ = () => {
           tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
         </p>
       </div>
-
       <div className='accordion'>
-        <div className='question'>
-          <p>Can I access my stored iterns anytime?</p>
-          <div className='icon'>
-            <FaChevronDown />
-          </div>
-        </div>
-        {/* <div className='answer'>
-          <p>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast.
-          </p>
-        </div> */}
-        <div className='question'>
-          <p>Do you offer climate-controlled storage units?</p>
-          <div className='icon'>
-            <FaChevronDown />
-          </div>
-        </div>
-        {/* <div className='answer'>
-          <p>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast.
-          </p>
-        </div> */}
-        <div className='question'>
-          <p>How long can I rent a storage unit?</p>
-          <div className='icon'>
-            <FaChevronDown />
-          </div>
-        </div>
-        {/* <div className='answer'>
-          <p>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast.
-          </p>
-        </div> */}
-        <div className='question'>
-          <p>Can I change the size of my storage unit if I need more space?</p>
-          <div className='icon'>
-            <FaChevronDown />
-          </div>
-        </div>
-        {/* <div className='answer'>
-          <p>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast.
-          </p>
-        </div> */}
-        <div className='question'>
-          <p>How do I pay for my storage unit?</p>
-          <div className='icon'>
-            <FaChevronDown />
-          </div>
-        </div>
-        {/* <div className='answer'>
-          <p>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast.
-          </p>
-        </div> */}
+        {accordion.map((item) => (
+          <AccordionItem key={item.id} item={item} />
+        ))}
       </div>
     </section>
   );
