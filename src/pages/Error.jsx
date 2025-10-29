@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import Newsletter from '../components/newsletter/Newsletter';
 
@@ -11,7 +12,9 @@ const Error = () => {
           Sorry, the page you are looking for does not exist. It may have been
           moved, removed altogether or is temporarily unavailable.
         </p>
-        <Button btnText={'back to home'} />
+        <Link to='/'>
+          <Button btnText={'back to home'} variant='dark-bg' />
+        </Link>
       </div>
       <Newsletter />
     </>

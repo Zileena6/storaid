@@ -16,7 +16,7 @@ const Home = () => {
       <AboutUs />
       <LogoBanner />
       <OurServices />
-      <Testimonials />
+      <Testimonials variant={'bg-image'} />
       <Marketing />
       <PricingPlan />
       <PerfectFit />

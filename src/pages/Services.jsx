@@ -3,6 +3,7 @@ import OurServices from '../components/services/OurServices';
 import Testimonials from '../components/testimonials/Testimonials';
 import PerfectFit from '../components/perfectFit/PerfectFit';
 import Newsletter from '../components/newsletter/Newsletter';
+import FAQ from '../components/faq/FAQ';
 
 const Services = () => {
   return (
@@ -10,7 +11,7 @@ const Services = () => {
       <SubPageHero id={'services'} />
       <OurServices />
       <Testimonials />
-      {/* FAQs */}
+      <FAQ />
       <PerfectFit />
       <Newsletter />
     </div>

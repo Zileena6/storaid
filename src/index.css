@@ -8,6 +8,7 @@
 
 :root {
   font-family: 'Urbanist', sans-serif;
+  color: var(--secondary);
   line-height: 1.5;
   font-weight: 400;
 
@@ -43,11 +44,13 @@ h2 {
   font-weight: 800;
 }
 h3 {
+  color: var(--secondary);
   font-size: 3.25rem;
   font-weight: 700;
   line-height: 100%;
 }
 h4 {
+  color: var(--accent);
   font-size: 1.56rem;
   font-weight: 700;
 }
@@ -452,6 +455,7 @@ header {
       gap: 0.5rem;
 
       p {
+        color: var(--primary);
         padding-right: 1.25rem;
       }
 
@@ -649,10 +653,13 @@ header {
 }
 
 .testimonials-container {
-  background-image: url('./assets/testimonials-bg-img.png');
-  background-size: cover;
-  background-repeat: no-repeat;
   padding: 5.6rem 0;
+
+  &.bg-image {
+    background-image: url('./assets/testimonials-bg-img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
   .testimonials-intro {
     max-width: 1364px;
@@ -686,7 +693,7 @@ header {
     margin: 0 auto;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1.75rem;
   }
 }
@@ -765,7 +772,6 @@ header {
 /* MARK: PerfectFit */
 .section-container {
   background: var(--accent-3);
-  color: var(--primary);
   padding: 6rem 0;
 
   .content-container {
@@ -779,6 +785,7 @@ header {
 
     .title,
     .description {
+      color: var(--primary);
       text-align: center;
       padding: 0 10rem;
     }
@@ -815,6 +822,60 @@ header {
   }
 }
 
+/* MARK: ContactUs */
+
+/* MARK: FindUsOn */
+
+/* MARK: FAQs */
+.faqs-container {
+  max-width: 1364px;
+  margin: 0 auto;
+  padding: 6rem 0;
+  display: flex;
+  justify-content: space-between;
+
+  .faqs-content {
+    .title {
+      padding-top: 0.5rem;
+    }
+
+    .description {
+      max-width: 40rem;
+      padding: 1.25rem 0;
+    }
+  }
+
+  .accordion {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+
+    .question {
+      background-color: var(--color-2);
+      color: var(--secondary);
+      font-size: 1.125rem;
+      font-weight: 600;
+      padding: 0.9rem;
+      border-radius: 5px;
+
+      display: flex;
+      justify-content: space-between;
+
+      &:hover {
+        background-color: var(--accent);
+        color: var(--primary);
+      }
+    }
+
+    .answer {
+      padding: 0 3rem;
+    }
+  }
+}
+
+/* MARK: BookingUnit */
+
 /* MARK: Newsletter */
 .newsletter-container {
   background: var(--color-3);
@@ -826,7 +887,6 @@ header {
 
     display: flex;
     justify-content: space-between;
-    /* gap: 6rem; */
 
     .text-content {
       max-width: 41rem;
