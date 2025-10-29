@@ -359,7 +359,7 @@ p {
   }
 }
 
-/* InputField */
+/* MARK: InputField */
 .input-container {
   font-family: 'Inter', sans-serif;
   font-size: 1.125rem;
@@ -823,6 +823,80 @@ header {
 }
 
 /* MARK: ContactUs */
+.contact-container {
+  width: 1364px;
+  margin: 0 auto;
+  padding: 6rem 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  .contact-content {
+    max-width: 42rem;
+
+    .title {
+      padding: 1rem 0;
+    }
+    .description {
+      padding-bottom: 1rem;
+    }
+    .image-container {
+      width: 41.5rem;
+      height: 25rem;
+      background: #c4c4c4;
+      border: 5px solid var(--color-2);
+    }
+  }
+
+  .form-container {
+    font-family: 'Inter', sans-serif;
+    width: 41.6rem;
+    background-color: var(--color-3);
+    border-radius: 10px;
+    padding: 2rem;
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem 0;
+    }
+
+    .form-group {
+      display: flex;
+      gap: 1.25rem;
+
+      .form-row {
+        flex: 1;
+      }
+    }
+
+    .form-label {
+      text-transform: capitalize;
+      padding: 0.5rem;
+    }
+
+    .form-input,
+    .form-message {
+      font-size: 1rem;
+      padding: 1rem;
+      width: 100%;
+      border: 2px solid var(--accent);
+      border-radius: 5px;
+      flex: 1;
+    }
+
+    .message-container {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 1.25rem;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: var(--accent);
+    }
+  }
+}
 
 /* MARK: FindUsOn */
 
