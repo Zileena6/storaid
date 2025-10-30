@@ -372,11 +372,6 @@ p {
 
   label {
     padding-bottom: 0.5rem;
-
-    /* span {
-      color: #ff0000;
-      padding-left: 0.5ch;
-    } */
   }
 
   .input-field {
@@ -439,6 +434,58 @@ p {
   }
 }
 
+/* MARK: Form */
+
+.form-container {
+  font-family: 'Inter', sans-serif;
+  width: 41.6rem;
+  background-color: var(--color-3);
+  border-radius: 10px;
+  padding: 2rem;
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+  }
+
+  .form-group {
+    display: flex;
+    gap: 1.25rem;
+
+    .form-row {
+      flex: 1;
+    }
+  }
+
+  .form-label {
+    text-transform: capitalize;
+    padding: 0.5rem;
+  }
+
+  .form-input,
+  .form-message {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    border: 2px solid var(--accent);
+    border-radius: 5px;
+    flex: 1;
+  }
+
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.25rem;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--accent);
+  }
+}
+
 /* MARK: Header */
 header {
   display: flex;
@@ -486,6 +533,7 @@ header {
     max-width: 1364px;
     margin: 0 auto;
     padding-top: 10rem;
+
     display: flex;
     justify-content: space-between;
 
@@ -534,6 +582,7 @@ header {
   max-width: 1364px;
   margin: 0 auto;
   padding: 5.8rem 0;
+
   display: flex;
   gap: 1.7rem;
 
@@ -707,6 +756,7 @@ header {
   .marketing-content {
     max-width: 1364px;
     margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -747,6 +797,7 @@ header {
   max-width: 1364px;
   margin: 0 auto;
   padding: 6rem 0;
+
   display: flex;
   flex-direction: column;
 
@@ -831,6 +882,13 @@ header {
   .contact-content {
     max-width: 42rem;
 
+    .section-title {
+      background: var(--accent-3);
+      color: var(--accent);
+
+      /* Due to insufficient contrast ratio, I add a background to the section title (h4) */
+    }
+
     .title {
       padding: 1rem 0;
     }
@@ -842,56 +900,6 @@ header {
       height: 25rem;
       background: #c4c4c4;
       border: 5px solid var(--color-2);
-    }
-  }
-
-  .form-container {
-    font-family: 'Inter', sans-serif;
-    width: 41.6rem;
-    background-color: var(--color-3);
-    border-radius: 10px;
-    padding: 2rem;
-
-    .form-row {
-      display: flex;
-      flex-direction: column;
-      padding: 0.5rem 0;
-    }
-
-    .form-group {
-      display: flex;
-      gap: 1.25rem;
-
-      .form-row {
-        flex: 1;
-      }
-    }
-
-    .form-label {
-      text-transform: capitalize;
-      padding: 0.5rem;
-    }
-
-    .form-input,
-    .form-message {
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem;
-      padding: 1rem;
-      width: 100%;
-      border: 2px solid var(--accent);
-      border-radius: 5px;
-      flex: 1;
-    }
-
-    .message-container {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 1.25rem;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: var(--accent);
     }
   }
 }
@@ -961,6 +969,7 @@ header {
   max-width: 1364px;
   margin: 0 auto;
   padding: 6rem 0;
+
   display: flex;
   justify-content: space-between;
 
@@ -1007,6 +1016,48 @@ header {
 }
 
 /* MARK: BookingUnit */
+.booking-container {
+  width: 1364px;
+  margin: 0 auto;
+  padding: 6rem 0;
+
+  display: flex;
+  flex-direction: column;
+
+  .section-title {
+    background: var(--accent-3);
+    color: var(--accent);
+
+    /* Due to insufficient contrast ratio, I add a background to the section title (h4) */
+  }
+
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+
+    .title {
+      max-width: 42rem;
+    }
+
+    .description {
+      max-width: 41rem;
+    }
+  }
+
+  .booking-unit-container {
+    display: flex;
+    justify-content: space-between;
+
+    .image-container {
+      width: 42rem;
+      height: 34rem;
+      background: #c4c4c4;
+      border: 5px solid var(--color-2);
+    }
+  }
+}
 
 /* MARK: Newsletter */
 .newsletter-container {

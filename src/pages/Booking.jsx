@@ -1,3 +1,4 @@
+import BookingUnit from '../components/bookingUnit/BookingUnit';
 import FAQ from '../components/faq/FAQ';
 import SubPageHero from '../components/hero/SubPageHero';
 import Marketing from '../components/marketing/Marketing';
@@ -8,7 +9,7 @@ const Booking = () => {
   return (
     <div>
       <SubPageHero id={'booking'} />
-      {/* booking unit */}
+      <BookingUnit />
       <Marketing />
       <PerfectFit />
       <FAQ />
