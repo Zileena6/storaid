@@ -1,16 +1,7 @@
-import Button from './Button';
-
-// TODO: unfinished! need some thinking...
-
 const InputField = ({ label, name, type, value, placeholder, onChange }) => {
   return (
     <div className='input-container'>
-      {label && (
-        <label htmlFor={name}>
-          {label}
-          {/* <span>*</span> */}
-        </label>
-      )}
+      {label && <label htmlFor={name}>{label}</label>}
       <input
         className='input-field'
         id={name}
