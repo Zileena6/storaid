@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header>
-      <div className='contact-container'>
+      <div className='contact-banner'>
         <div className='contact'>
           <FaPhoneAlt />
           <p>+46 8 123 122 44</p>

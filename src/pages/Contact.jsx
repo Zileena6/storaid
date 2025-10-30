@@ -1,5 +1,6 @@
 import ContactUs from '../components/contact/ContactUs';
 import FAQ from '../components/faq/FAQ';
+import FindUs from '../components/findUs/FindUs';
 import SubPageHero from '../components/hero/SubPageHero';
 import Newsletter from '../components/newsletter/Newsletter';
 
@@ -8,7 +9,7 @@ const Contact = () => {
     <div>
       <SubPageHero id={'contact'} />
       <ContactUs />
-      {/* Find us on */}
+      <FindUs />
       <FAQ />
       <Newsletter />
     </div>

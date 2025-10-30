@@ -29,6 +29,7 @@
   --color-2: #ececec;
   --color-3: #faf8ec;
   --color-4: #f1ffea;
+  --color-5: rgba(241, 255, 234, 0.56);
 }
 
 /* MARK: Globals */
@@ -48,6 +49,7 @@ h3 {
   font-size: 3.25rem;
   font-weight: 700;
   line-height: 100%;
+  text-transform: capitalize;
 }
 h4 {
   color: var(--accent);
@@ -57,6 +59,7 @@ h4 {
 h5 {
   font-size: 1.5rem;
   font-weight: 600;
+  text-transform: capitalize;
 }
 h6 {
   font-size: 1.25rem;
@@ -441,7 +444,7 @@ header {
   display: flex;
   flex-direction: column;
 
-  .contact-container {
+  .contact-banner {
     background: var(--secondary);
     display: flex;
     justify-content: space-between;
@@ -588,12 +591,6 @@ header {
     .info-container {
       display: flex;
       gap: 2rem;
-
-      .more-info {
-        h5 {
-          text-transform: capitalize;
-        }
-      }
     }
   }
 }
@@ -877,6 +874,7 @@ header {
 
     .form-input,
     .form-message {
+      font-family: 'Inter', sans-serif;
       font-size: 1rem;
       padding: 1rem;
       width: 100%;
@@ -899,6 +897,64 @@ header {
 }
 
 /* MARK: FindUsOn */
+.find-us-section {
+  background-color: var(--accent-3);
+
+  .content-container {
+    width: 1364px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    .image-container {
+      max-height: 37.6rem;
+      padding: 6rem 0 0 6rem;
+    }
+
+    .info-container {
+      background-color: var(--color-5);
+      padding: 3rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1.68rem;
+
+      .description {
+        max-width: 32rem;
+      }
+
+      .contact-block {
+        display: flex;
+        gap: 1rem;
+
+        .find-us-icon {
+          background-color: var(--secondary);
+          color: var(--accent);
+          font-size: 2.5rem;
+          width: 3.75rem;
+          height: 3.75rem;
+          border-radius: 50%;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .social-container {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+
+        .line {
+          width: 10rem;
+          border-top: 2px solid var(--secondary);
+        }
+      }
+    }
+  }
+}
 
 /* MARK: FAQs */
 .faqs-container {
@@ -936,6 +992,7 @@ header {
         display: flex;
         justify-content: space-between;
 
+        &:hover,
         &.active {
           background-color: var(--accent);
           color: var(--primary);
