@@ -1,5 +1,7 @@
 import SocialList from '../links/SocialList';
 import FindUsImage from '../../assets/findUs-image.png';
+import { PiEnvelopeLight } from 'react-icons/pi';
+import { MdPhone, MdLocationOn } from 'react-icons/md';
 
 const FindUs = () => {
   return (
@@ -14,17 +16,33 @@ const FindUs = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
-          <div className='call-center'>
-            <h5>call center</h5>
-            <p>+46 8 123 122 44</p>
+
+          <div className='contact-block'>
+            <div className='find-us-icon'>
+              <MdPhone />
+            </div>
+            <div className='call-center'>
+              <h5>call center</h5>
+              <p>+46 8 123 122 44</p>
+            </div>
           </div>
-          <div className='email-address'>
-            <h5>email address</h5>
-            <p>contact@domain.com</p>
+          <div className='contact-block'>
+            <div className='find-us-icon'>
+              <PiEnvelopeLight />
+            </div>
+            <div className='email-address'>
+              <h5>email address</h5>
+              <p>contact@domain.com</p>
+            </div>
           </div>
-          <div className='location'>
-            <h5>location</h5>
-            <p>Klarabergsviadukten 90, Stockholm</p>
+          <div className='contact-block'>
+            <div className='find-us-icon'>
+              <MdLocationOn />
+            </div>
+            <div className='location'>
+              <h5>location</h5>
+              <p>Klarabergsviadukten 90, Stockholm</p>
+            </div>
           </div>
           <div className='social-container'>
             <h5>our social media</h5>
