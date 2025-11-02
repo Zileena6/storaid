@@ -1,19 +1,24 @@
 import { useEffect, useState } from 'react';
 import AccordionItem from './AccordionItem';
+import axios from 'axios';
+
+const url = import.meta.env.VITE_API_FAQS;
 
 const FAQ = () => {
   const [accordion, setAccordion] = useState([]);
-
-  const fetchFaq = async () => {
-    const res = await fetch(
-      'https://win25-jsf-assignment.azurewebsites.net/api/faqs'
-    );
-    const data = await res.json();
-    setAccordion(data);
-  };
+  const [openId, setOpenId] = useState(null);
 
   useEffect(() => {
-    fetchFaq();
+    const fetchFAQs = async () => {
+      try {
+        const response = await axios(url);
+        setAccordion(response.data);
+      } catch (error) {
+        console.log(error.response);
+      }
+    };
+
+    fetchFAQs();
   }, []);
 
   return (
@@ -27,8 +32,14 @@ const FAQ = () => {
         </p>
       </div>
       <div className='accordion'>
-        {accordion.map((item) => (
-          <AccordionItem key={item.id} item={item} />
+        {accordion.map((faq) => (
+          <AccordionItem
+            key={faq.id}
+            item={faq}
+            id={faq.id}
+            isOpen={openId === faq.id}
+            setOpenId={setOpenId}
+          />
         ))}
       </div>
     </section>

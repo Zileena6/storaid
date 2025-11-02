@@ -1,11 +1,11 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa6';
 
-const AccordionItem = ({ item }) => {
-  const [isOpen, setIsOpen] = useState();
+const AccordionItem = ({ item, id, isOpen, setOpenId }) => {
+  // const [isOpen, setIsOpen] = useState();
 
   const toggleAccordion = () => {
-    setIsOpen(!isOpen);
+    setOpenId((prev) => (prev === id ? null : id));
   };
 
   return (

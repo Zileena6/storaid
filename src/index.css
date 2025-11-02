@@ -242,6 +242,9 @@ p {
   width: 44ch;
   padding: 1.6rem;
   border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .rating-stars {
     font-size: 1.4rem;
@@ -264,10 +267,11 @@ p {
       gap: 1.25rem;
 
       .avatar {
-        background-color: #c4c4c4;
-        width: 4.4rem;
-        height: 4.4rem;
-        border-radius: 50%;
+        img {
+          width: 4.4rem;
+          height: 4.4rem;
+          border-radius: 50%;
+        }
       }
 
       .user {
@@ -291,15 +295,21 @@ p {
   width: 45ch;
   padding: 1.56rem;
   border-radius: 0.3rem;
+  height: auto;
 
   display: flex;
   flex-direction: column;
 
   .image-container {
-    background: #c4c4c4;
     width: 23.7rem;
     height: 15.8rem;
     border-radius: 0.3rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   .content-container {
@@ -324,12 +334,25 @@ p {
     }
 
     .content {
-      padding-bottom: 1.3rem;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
     }
 
-    a {
+    .no-line-clamp {
+      overflow: visible;
+      display: block;
+      -webkit-box-orient: horizontal;
+      -webkit-line-clamp: unset;
+      line-clamp: unset;
+    }
+
+    .read-more {
       color: var(--accent);
       text-decoration: none;
+      padding-top: 1.3rem;
 
       display: flex;
       align-items: center;
@@ -340,6 +363,7 @@ p {
   &:hover {
     background: var(--color-4);
     color: var(--secondary);
+    cursor: pointer;
   }
 }
 
@@ -867,6 +891,7 @@ header {
   .blog-cards-container {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
@@ -1005,6 +1030,7 @@ header {
         &.active {
           background-color: var(--accent);
           color: var(--primary);
+          cursor: pointer;
         }
       }
 
