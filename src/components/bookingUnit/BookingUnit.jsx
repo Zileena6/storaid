@@ -1,4 +1,5 @@
 import Button from '../Button';
+import image from '../../assets/booking-unit.jpg';
 
 const BookingUnit = () => {
   return (
@@ -15,7 +16,9 @@ const BookingUnit = () => {
         </p>
       </div>
       <div className='booking-unit-container'>
-        <div className='image-container'></div>
+        <div className='image-container'>
+          <img src={image} alt='' />
+        </div>
         <div className='form-container'>
           <form action=''>
             <div className='form-group'>
