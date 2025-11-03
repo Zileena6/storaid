@@ -3,12 +3,15 @@ import Button from '../Button';
 import StatsCard from './StatsCard';
 import phone from '../../assets/phone-icon.svg';
 import { Link } from 'react-router-dom';
+import image from '../../assets/about-safe.jpg';
 
 const AboutUs = () => {
   return (
     <section className='about-container'>
       <div className='image-container'>
-        <div className='image'>{/* Find suitable image */}</div>
+        <div className='image'>
+          <img src={image} alt='safe storage unit' />
+        </div>
         <StatsCard />
       </div>
       <div className='content-container'>

@@ -1,4 +1,5 @@
 import Tiles from '../tiles/Tiles';
+import image from '../../assets/services-specialized.jpg';
 
 const OurServices = () => {
   return (
@@ -17,7 +18,9 @@ const OurServices = () => {
         <div className='detail-content'>
           <Tiles ids={[3, 4]} />
         </div>
-        <div className='image-container'>{/* Find suitable image */}</div>
+        <div className='image-container'>
+          <img src={image} alt='storage units' />
+        </div>
         <div className='detail-content'>
           <Tiles ids={[5, 6]} />
         </div>

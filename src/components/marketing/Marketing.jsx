@@ -1,4 +1,5 @@
 import IconBlock from '../marketing/IconBlock';
+import image from '../../assets/choose-exceptional.jpg';
 
 const Marketing = ({ variant = null }) => {
   return (
@@ -15,7 +16,9 @@ const Marketing = ({ variant = null }) => {
         </div>
         <div className='details-content'>
           <IconBlock />
-          <div className='image'></div>
+          <div className='image'>
+            <img src={image} alt='' />
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import Button from '../Button';
+import image from '../../assets/contact-personalized.jpg';
 
 const ContactUs = () => {
   return (
@@ -10,7 +11,9 @@ const ContactUs = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
           tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo
         </p>
-        <div className='image-container'></div>
+        <div className='image-container'>
+          <img src={image} alt='' />
+        </div>
       </div>
       <div className='form-container'>
         <form action=''>
