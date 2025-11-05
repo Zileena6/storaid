@@ -8,9 +8,6 @@ const PricingPlan = () => {
 
       <div className='price-cards-container'>
         <PriceList />
-        <PriceList />
-        <PriceList />
-        <PriceList />
       </div>
     </section>
   );

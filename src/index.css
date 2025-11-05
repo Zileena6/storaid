@@ -87,10 +87,12 @@ p {
 .btn-light-bg:hover {
   color: var(--primary);
   background-color: var(--secondary);
+  cursor: pointer;
 }
 
 .btn-dark-bg:hover {
   background-color: var(--primary);
+  cursor: pointer;
 }
 
 /* MARK: NavLinks */
@@ -848,8 +850,10 @@ header {
   }
 
   .price-cards-container {
-    display: flex;
-    justify-content: space-between;
+    .price-list {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
