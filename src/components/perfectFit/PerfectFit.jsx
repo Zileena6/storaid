@@ -15,7 +15,7 @@ const PerfectFit = () => {
           blandit nisi non sodales augue. Phasellus eget elit gravida.
         </p>
         <Link to='/booking'>
-          <Button btnText={'book now'} />
+          <Button btnText={'book now'} variant='dark-bg' />
         </Link>
       </div>
     </section>
