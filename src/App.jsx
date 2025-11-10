@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -10,7 +11,7 @@ import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -21,7 +22,7 @@ function App() {
         <Route path='/404' element={<NotFound />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 }
 
