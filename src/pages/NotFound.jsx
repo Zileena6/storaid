@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import Newsletter from '../components/newsletter/Newsletter';
 
-const Error = () => {
+const NotFound = () => {
   return (
     <>
       <div className='error-container'>
@@ -20,4 +20,4 @@ const Error = () => {
     </>
   );
 };
-export default Error;
+export default NotFound;

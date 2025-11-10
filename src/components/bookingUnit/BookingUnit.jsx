@@ -1,7 +1,107 @@
 import Button from '../Button';
 import image from '../../assets/booking-unit.jpg';
+import { useState } from 'react';
+import axios from 'axios';
+
+const url = import.meta.env.VITE_API_BOOKING;
 
 const BookingUnit = () => {
+  const [options, _setOptions] = useState([
+    { id: 1, text: 'Small Unit' },
+    { id: 2, text: 'Medium Unit' },
+    { id: 3, text: 'Large Unit' },
+    { id: 4, text: 'Executive Unit' },
+  ]);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    selectedUnit: '',
+    purpose: '',
+  });
+
+  const [message, setMessage] = useState('');
+
+  const [errors, setErrors] = useState({});
+
+  const validateField = (name, value) => {
+    let error = '';
+
+    if (name === 'name' && !/^[A-Öa-ö\s-]{2,}$/.test(value)) {
+      error = 'Must be at least 2 characters long, no numbers';
+    } else if (
+      name === 'email' &&
+      !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(value)
+    ) {
+      error = 'Must be a valid email (eg. username@example.com)';
+    } else if (name === 'selectedUnit' && value.trim() === '') {
+      error = 'Please select a unit';
+    } else if (name === 'purpose' && !/^[A-Öa-ö\s-]{2,}$/.test(value)) {
+      error = 'Please add a purpose';
+    }
+
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: error }));
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!/^[A-Öa-ö\s-]{2,}$/.test(formData.name)) {
+      newErrors.name = 'Must be at least 2 characters long, no numbers';
+    }
+
+    if (
+      !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(formData.email)
+    ) {
+      newErrors.email = 'Must be a valid email (eg. username@example.com)';
+    }
+
+    if (!formData.selectedUnit || formData.selectedUnit.trim() === '') {
+      newErrors.selectedUnit = 'Please select a unit';
+    }
+
+    if (!/^[A-Öa-ö\s-]{2,}$/.test(formData.purpose)) {
+      newErrors.purpose = 'Please add a purpose';
+    }
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData({ ...formData, [name]: value });
+
+    validateField(name, value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const isValid = validateForm();
+
+    if (!isValid) return;
+
+    try {
+      const res = await axios.post(url, formData);
+
+      setFormData({
+        name: '',
+        email: '',
+        selectedUnit: '',
+        purpose: '',
+      });
+
+      setMessage(res.data?.message || 'Thank you!');
+
+      return { success: true, data: res.data, message: res.data?.message };
+    } catch (error) {
+      console.log('🚀 ~ handleSubmit ~ error:', error);
+      return { success: false, message: 'error.message' };
+    }
+  };
+
   return (
     <section className='booking-container'>
       <h4 className='section-title'>Booking Unit</h4>
@@ -20,7 +120,7 @@ const BookingUnit = () => {
           <img src={image} alt='' />
         </div>
         <div className='form-container'>
-          <form action=''>
+          <form action='' onSubmit={handleSubmit}>
             <div className='form-group'>
               <div className='form-row'>
                 <label htmlFor='name' className='form-label'>
@@ -28,10 +128,18 @@ const BookingUnit = () => {
                 </label>
                 <input
                   type='text'
+                  name='name'
                   id='name'
+                  value={formData.name}
+                  onChange={handleInputChange}
                   placeholder='Your Name'
                   className='form-input'
                 />
+                <div>
+                  {errors.name && (
+                    <span className='validation-error'>{errors.name}</span>
+                  )}
+                </div>
               </div>
               <div className='form-row'>
                 <label htmlFor='email' className='form-label'>
@@ -39,38 +147,61 @@ const BookingUnit = () => {
                 </label>
                 <input
                   type='email'
+                  name='email'
                   id='email'
+                  value={formData.email}
+                  onChange={handleInputChange}
                   placeholder='Email'
-                  pattern='.+@example\.com'
                   className='form-input'
                 />
+                {errors.email && (
+                  <span className='validation-error'>{errors.email}</span>
+                )}
               </div>
             </div>
             <div className='form-row'>
-              <label htmlFor='unit' className='form-label'>
+              <label htmlFor='selectedUnit' className='form-label'>
                 Choose Unit
               </label>
-              <input
-                type='text'
-                id='unit'
-                placeholder='Choose Unit'
+              <select
+                id='selectedUnit'
+                name='selectedUnit'
+                value={formData.selectedUnit}
+                onChange={handleInputChange}
                 className='form-input'
-              />
+              >
+                <option value=''>Choose Unit</option>
+                {options.map((option) => (
+                  <option key={option.id} value={option.text}>
+                    {option.text}
+                  </option>
+                ))}
+              </select>
+              {errors.selectedUnit && (
+                <span className='validation-error'>{errors.selectedUnit}</span>
+              )}
             </div>
             <div className='message-container'>
-              <label htmlFor='message' className='form-label'>
+              <label htmlFor='purpose' className='form-label'>
                 Storage purpose
               </label>
               <textarea
-                id='message'
+                id='purpose'
+                name='purpose'
                 rows={5}
+                value={formData.purpose}
+                onChange={handleInputChange}
                 placeholder='Describe your storage purpose so that we can match your request'
                 className='form-message'
               ></textarea>
+              {errors.purpose && (
+                <span className='validation-error'>{errors.purpose}</span>
+              )}
             </div>
 
-            <Button btnText={'Book Unit'} />
+            <Button btnText={'Book Unit'} type='submit' />
           </form>
+          {message && <p>{message}</p>}
         </div>
       </div>
     </section>
