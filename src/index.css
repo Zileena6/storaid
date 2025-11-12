@@ -39,28 +39,34 @@ h1 {
   font-weight: 700;
   color: var(--color-4);
 }
+
 h2 {
   color: var(--accent);
   font-size: 4rem;
   font-weight: 800;
 }
-h3 {
+
+h3,
+.section-title {
+  color: var(--accent);
+  font-size: 1.56rem;
+  font-weight: 700;
+}
+
+h4 {
   color: var(--secondary);
   font-size: 3.25rem;
   font-weight: 700;
   line-height: 100%;
   text-transform: capitalize;
 }
-h4 {
-  color: var(--accent);
-  font-size: 1.56rem;
-  font-weight: 700;
-}
+
 h5 {
   font-size: 1.5rem;
   font-weight: 600;
   text-transform: capitalize;
 }
+
 h6 {
   font-size: 1.25rem;
   font-weight: 700;
@@ -170,39 +176,47 @@ p {
   background: var(--color-4);
   border: 3px solid var(--color-2);
   border-radius: 0.625rem;
-  padding: 2.2rem;
+  padding: 2rem 2.2rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.3rem;
+  gap: 1rem;
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
 
   .price-span {
     display: flex;
-    gap: 1.3rem;
+    gap: 1rem;
 
     span {
       color: var(--accent);
       font-size: 1.5rem;
       font-weight: 600;
-      padding-top: 0.5rem;
       text-shadow: 2px 2px var(--secondary);
     }
 
-    h3 {
+    .price {
       color: var(--accent);
       text-shadow: 2px 4px var(--secondary);
+      font-size: 3.25rem;
+      font-weight: 700;
+      line-height: 100%;
+      text-transform: capitalize;
     }
 
     .month {
       display: flex;
       align-items: self-end;
-      padding-bottom: 0.8rem;
     }
   }
 
-  p {
+  .description {
     text-align: center;
     padding-bottom: 1rem;
   }
@@ -214,7 +228,8 @@ p {
 
   ul {
     font-family: 'Inter', sans-serif;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
+    padding-top: 1rem;
     list-style: none;
 
     li {
@@ -401,7 +416,7 @@ p {
   font-size: 1.125rem;
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
+  padding-right: 0.5rem;
 
   label {
     padding-bottom: 0.5rem;
@@ -479,7 +494,6 @@ p {
   .form-row {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem 0;
   }
 
   .form-group {
@@ -493,7 +507,7 @@ p {
 
   .form-label {
     text-transform: capitalize;
-    padding: 0.5rem;
+    padding: 0.2rem;
   }
 
   .form-input,
@@ -518,6 +532,12 @@ p {
   textarea::placeholder {
     color: var(--accent);
   }
+}
+
+/* MARK: Box-of-error */
+.box-of-error {
+  height: 2.1rem;
+  line-height: normal;
 
   .validation-error {
     color: rgb(201, 3, 3);
@@ -535,6 +555,10 @@ p {
 
   h2 {
     text-shadow: 2px 4px var(--secondary);
+  }
+
+  p {
+    font-weight: 700;
   }
 }
 
@@ -592,16 +616,12 @@ header {
     .content-container {
       max-width: 44rem;
 
-      h4 {
-        color: var(--accent);
-      }
-
       h1 {
         line-height: 100%;
         padding: 1.25rem 0;
       }
 
-      p {
+      .description {
         color: var(--primary);
         padding-bottom: 1.25rem;
       }
@@ -666,14 +686,14 @@ header {
     display: flex;
     flex-direction: column;
 
-    h4 {
+    .section-title {
       background: var(--accent-3);
       color: var(--accent);
 
       /* Due to insufficient contrast ratio, I add a background to the section title (h4) */
     }
 
-    h3 {
+    h4 {
       padding: 0.5rem 0;
     }
 
@@ -959,9 +979,11 @@ header {
     .title {
       padding: 1rem 0;
     }
+
     .description {
       padding-bottom: 1rem;
     }
+
     .image-container {
       width: 41.5rem;
       height: 25rem;
@@ -972,6 +994,10 @@ header {
         height: 100%;
       }
     }
+  }
+
+  .message-container {
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -1045,6 +1071,9 @@ header {
   justify-content: space-between;
 
   .faqs-content {
+    .section-title {
+      background: var(--accent-3);
+    }
     .title {
       padding-top: 0.5rem;
     }
@@ -1132,6 +1161,21 @@ header {
         height: 100%;
       }
     }
+    .form-container {
+      padding-bottom: 1rem;
+
+      .form-group {
+        padding-bottom: 0.3rem;
+      }
+
+      .message-container {
+        padding-bottom: 0;
+      }
+
+      h6 {
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -1161,7 +1205,13 @@ header {
 
       .subscribe-container {
         display: flex;
-        align-items: center;
+        align-items: start;
+
+        .input-group {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
 
         .input-field {
           width: 33rem;
@@ -1174,13 +1224,18 @@ header {
         }
 
         .btn {
-          padding: 1.1rem 1.4rem;
-          margin-top: 0.46rem;
+          padding: 1.1rem 1.5rem;
+          margin-top: 0.5rem;
         }
       }
 
       .submit-message {
+        font-weight: 700;
         padding: 0;
+
+        .btn {
+          padding: 0.7rem 1.8rem;
+        }
       }
     }
   }
@@ -1214,7 +1269,7 @@ footer {
   }
 }
 
-/* MARK: Error */
+/* MARK: NotFound */
 .error-container {
   background: var(--accent-3);
   width: 100%;

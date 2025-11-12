@@ -24,8 +24,8 @@ const FAQ = () => {
   return (
     <section className='faqs-container'>
       <div className='faqs-content'>
-        <h4 className='section-title'>FAQs</h4>
-        <h3 className='title'>Frequently Ask Questions</h3>
+        <h3 className='section-title'>FAQs</h3>
+        <h4 className='title'>Frequently Ask Questions</h4>
         <p className='description'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
           tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.

@@ -78,20 +78,11 @@ const Newsletter = () => {
     }
   };
 
-  // if (submitted) {
-  //   return (
-  //     <div className='submit-message'>
-  //       <p>{message}</p>
-  //       <Button btnText={'close'} onClick={handleSuccess} />
-  //     </div>
-  //   );
-  // }
-
   return (
     <section className='newsletter-container'>
       <div className='content-container'>
         <div className='text-content'>
-          <h3>Subscribe Our Newsletter</h3>
+          <h4>Subscribe Our Newsletter</h4>
           <p>
             Subscribe to our newsletter to receive early discount offers,
             updates and info
@@ -110,19 +101,22 @@ const Newsletter = () => {
               className='subscribe-container'
               noValidate
             >
-              <InputField
-                type={'email'}
-                label={<span className='visually-hidden'>email</span>}
-                name={'email'}
-                id={'email'}
-                placeholder={'Enter email'}
-                onChange={handleInputChange}
-                value={formData.email}
-              />
-              {errors.email && (
-                <span className='validation-error'>{errors.email}</span>
-              )}
-
+              <div className='input-group'>
+                <InputField
+                  type={'email'}
+                  label={<span className='visually-hidden'>email</span>}
+                  name={'email'}
+                  id={'email'}
+                  placeholder={'Enter email'}
+                  onChange={handleInputChange}
+                  value={formData.email}
+                />
+                <div className='box-of-error'>
+                  {errors.email && (
+                    <span className='validation-error'>{errors.email}</span>
+                  )}
+                </div>
+              </div>
               <Button btnText={'submit'} type='submit' />
             </form>
           )}

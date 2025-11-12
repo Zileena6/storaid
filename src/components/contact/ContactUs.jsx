@@ -26,7 +26,7 @@ const ContactUs = () => {
       name === 'email' &&
       !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(value)
     ) {
-      error = 'Must be a valid email (eg. username@example.com)';
+      error = 'Must be a valid email (eg. name@example.com)';
     } else if (name === 'subject' && !/^[A-Öa-ö\s-]{2,}$/.test(value)) {
       error = 'Please select a unit';
     } else if (name === 'comment' && !/^[A-Öa-ö\s-]{2,}$/.test(value)) {
@@ -46,7 +46,7 @@ const ContactUs = () => {
     if (
       !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(formData.email)
     ) {
-      newErrors.email = 'Must be a valid email (eg. username@example.com)';
+      newErrors.email = 'Must be a valid email (eg. name@example.com)';
     }
 
     if (!/^[A-Öa-ö\s-]{2,}$/.test(formData.subject)) {
@@ -116,8 +116,8 @@ const ContactUs = () => {
   return (
     <section className='contact-container'>
       <div className='contact-content'>
-        <h4 className='section-title'>Get in Touch</h4>
-        <h3 className='title'>Get Personalized Assistance – Contact Us</h3>
+        <h3 className='section-title'>Get in Touch</h3>
+        <h4 className='title'>Get Personalized Assistance – Contact Us</h4>
         <p className='description'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
           tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo
@@ -141,9 +141,11 @@ const ContactUs = () => {
               onChange={handleInputChange}
               className='form-input'
             />
-            {errors.name && (
-              <span className='validation-error'>{errors.name}</span>
-            )}
+            <div className='box-of-error'>
+              {errors.name && (
+                <span className='validation-error'>{errors.name}</span>
+              )}
+            </div>
           </div>
           <div className='form-group'>
             <div className='form-row'>
@@ -159,9 +161,6 @@ const ContactUs = () => {
                 onChange={handleInputChange}
                 className='form-input'
               />
-              {errors.email && (
-                <span className='validation-error'>{errors.email}</span>
-              )}
             </div>
             <div className='form-row'>
               <label htmlFor='phoneNumber' className='form-label'>
@@ -176,10 +175,15 @@ const ContactUs = () => {
                 onChange={handleInputChange}
                 className='form-input'
               />
-              {errors.phoneNumber && (
-                <span className='validation-error'>{errors.phoneNumber}</span>
-              )}
             </div>
+          </div>
+          <div className='box-of-error'>
+            {errors.email && (
+              <span className='validation-error'>{errors.email}</span>
+            )}
+            {errors.phoneNumber && (
+              <span className='validation-error'>{errors.phoneNumber}</span>
+            )}
           </div>
           <div className='form-row'>
             <label htmlFor='subject' className='form-label'>
@@ -194,9 +198,11 @@ const ContactUs = () => {
               onChange={handleInputChange}
               className='form-input'
             />
-            {errors.subject && (
-              <span className='validation-error'>{errors.subject}</span>
-            )}
+            <div className='box-of-error'>
+              {errors.subject && (
+                <span className='validation-error'>{errors.subject}</span>
+              )}
+            </div>
           </div>
           <div className='message-container'>
             <label htmlFor='comment' className='form-label'>
@@ -211,9 +217,11 @@ const ContactUs = () => {
               onChange={handleInputChange}
               className='form-message'
             ></textarea>
-            {errors.comment && (
-              <span className='validation-error'>{errors.comment}</span>
-            )}
+            <div className='box-of-error'>
+              {errors.comment && (
+                <span className='validation-error'>{errors.comment}</span>
+              )}
+            </div>
           </div>
           <Button btnText={'Submit'} type='submit' />
         </form>

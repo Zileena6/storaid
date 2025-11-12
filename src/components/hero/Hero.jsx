@@ -7,9 +7,9 @@ const Hero = () => {
     <section className='hero-section'>
       <div className='hero-container'>
         <div className='content-container'>
-          <h4>Welcome to StorAid</h4>
+          <p className='section-title'>Welcome to StorAid</p>
           <h1>Space Simplified, Storage Perfected</h1>
-          <p>
+          <p className='description'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a
             sem magna. Etiam ac odio sit amet lorem fringilla sodales. Cras
             lobortis, libero at iaculis luctus, nisi ex pellentesque nisi, at

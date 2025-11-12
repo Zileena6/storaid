@@ -15,8 +15,8 @@ const AboutUs = () => {
         <StatsCard />
       </div>
       <div className='content-container'>
-        <h4>About Us</h4>
-        <h3>Providing a Safe Space for Your Treasured Items</h3>
+        <h3 className='section-title'>About Us</h3>
+        <h4>Providing a Safe Space for Your Treasured Items</h4>
         <p className='text'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
           molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac

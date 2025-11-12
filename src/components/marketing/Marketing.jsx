@@ -5,9 +5,9 @@ const Marketing = ({ variant = null }) => {
   return (
     <section className={`marketing-container ${variant} `}>
       <div className='marketing-content'>
-        <h4 className='section-title'>Why Choose Us</h4>
+        <h3 className='section-title'>Why Choose Us</h3>
         <div className='marketing-intro'>
-          <h3 className='title'>Choose Us for Exceptional Storage Solutions</h3>
+          <h4 className='title'>Choose Us for Exceptional Storage Solutions</h4>
           <p className='description'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris

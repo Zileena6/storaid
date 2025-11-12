@@ -24,8 +24,8 @@ const Testimonials = ({ variant = null }) => {
   return (
     <section className={`testimonials-container overlay ${variant}`}>
       <div className='testimonials-intro'>
-        <h4 className='section-title'>Testimonials</h4>
-        <h3 className='title'>See What Our Client Have to Say</h3>
+        <h3 className='section-title'>Testimonials</h3>
+        <h4 className='title'>See What Our Client Have to Say</h4>
         <p className='description'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
           molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac

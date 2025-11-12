@@ -4,9 +4,9 @@ import image from '../../assets/services-specialized.jpg';
 const OurServices = () => {
   return (
     <section className='services-container'>
-      <h4 className='section-title'>Our Services</h4>
+      <h3 className='section-title'>Our Services</h3>
       <div className='text-content'>
-        <h3 className='title'>Specialized Storage for Every Special Item</h3>
+        <h4 className='title'>Specialized Storage for Every Special Item</h4>
 
         <p className='description'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque

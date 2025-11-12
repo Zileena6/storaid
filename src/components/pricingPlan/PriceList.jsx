@@ -8,15 +8,15 @@ const PriceList = () => {
     <div className='price-list'>
       {priceCard.map(({ id, title, price, description }) => (
         <div key={id} className='price-card'>
-          <h5>{title}</h5>
+          <h5 className='card-title'>{title}</h5>
           <div className='price-span'>
             <span>$</span>
-            <h3>{price}</h3>
+            <p className='price'>{price}</p>
             <div className='month'>
               <h6>/month</h6>
             </div>
           </div>
-          <p>{description}</p>
+          <p className='description'>{description}</p>
           <div className='line'></div>
           <ul>
             <li>

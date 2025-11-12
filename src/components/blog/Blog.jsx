@@ -23,9 +23,9 @@ const Blog = () => {
 
   return (
     <section className='blog-container'>
-      <h4 className='section-title'>Latest Blog and News</h4>
+      <h3 className='section-title'>Latest Blog and News</h3>
       <div className='blog-intro'>
-        <h3 className='title'>Check Out Our Latest Blog and News Update</h3>
+        <h4 className='title'>Check Out Our Latest Blog and News Update</h4>
         <p className='description'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
           molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac
