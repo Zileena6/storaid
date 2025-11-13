@@ -424,15 +424,12 @@ p {
 
   .input-field {
     width: 100%;
+    max-height: 3.75rem;
     padding: 1.3rem;
     border: 2px solid var(--accent);
     border-radius: 0.3rem;
     font-size: 1rem;
     flex: 1;
-  }
-
-  input::placeholder {
-    color: var(--accent);
   }
 }
 
@@ -522,6 +519,18 @@ p {
     flex-grow: 0;
   }
 
+  .input-error {
+    border-color: rgb(201, 3, 3);
+    background: rgb(245, 218, 218);
+    color: rgb(201, 3, 3);
+    font-size: 1.2rem;
+
+    &::placeholder {
+      color: rgb(201, 3, 3);
+      font-size: 1.2rem;
+    }
+  }
+
   .message-container {
     display: flex;
     flex-direction: column;
@@ -530,7 +539,7 @@ p {
 
   input::placeholder,
   textarea::placeholder {
-    color: var(--accent);
+    color: var(--accent-3);
   }
 }
 
@@ -538,9 +547,15 @@ p {
 .box-of-error {
   height: 2.1rem;
   line-height: normal;
+  position: relative;
 
   .validation-error {
     color: rgb(201, 3, 3);
+  }
+
+  .phone-error {
+    position: absolute;
+    right: 0;
   }
 }
 
@@ -566,6 +581,10 @@ p {
 header {
   display: flex;
   flex-direction: column;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
   .contact-banner {
     background: var(--secondary);
@@ -598,6 +617,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    img {
+      width: auto;
+      height: auto;
+    }
   }
 }
 
@@ -782,7 +806,7 @@ header {
   padding: 5.6rem 0;
 
   &.bg-image {
-    background-image: url('./assets/testimonials-bg-img.png');
+    background-image: url('./assets/testimonials-bg-img.webp');
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -1182,7 +1206,6 @@ header {
 /* MARK: Newsletter */
 .newsletter-container {
   background: var(--color-3);
-  padding: 2.125rem 0;
 
   .content-container {
     max-width: 1364px;
@@ -1206,11 +1229,12 @@ header {
       .subscribe-container {
         display: flex;
         align-items: start;
+        padding-top: 2rem;
 
         .input-group {
           display: flex;
           flex-direction: column;
-          gap: 0.5rem;
+          gap: 0.2rem;
         }
 
         .input-field {

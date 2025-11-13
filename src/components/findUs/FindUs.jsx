@@ -1,5 +1,5 @@
 import SocialList from '../links/SocialList';
-import FindUsImage from '../../assets/findUs-image.png';
+import FindUsImage from '../../assets/findUs-image.webp';
 import { PiEnvelopeLight } from 'react-icons/pi';
 import { MdPhone, MdLocationOn } from 'react-icons/md';
 

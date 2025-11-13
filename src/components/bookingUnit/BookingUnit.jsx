@@ -1,5 +1,5 @@
 import Button from '../Button';
-import image from '../../assets/booking-unit.jpg';
+import image from '../../assets/booking-unit.webp';
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -33,7 +33,7 @@ const BookingUnit = () => {
       name === 'email' &&
       !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(value)
     ) {
-      error = 'must be a valid email (eg. name@example.com)';
+      error = 'must be a valid email (eg. name@mail.com)';
     } else if (name === 'selectedUnit' && value.trim() === '') {
       error = 'Please select a unit';
     } else if (name === 'purpose' && !/^[A-Öa-ö\s-]{2,}$/.test(value)) {
@@ -53,7 +53,7 @@ const BookingUnit = () => {
     if (
       !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(formData.email)
     ) {
-      newErrors.email = 'must be a valid email (eg. name@example.com)';
+      newErrors.email = 'must be a valid email (eg. name@mail.com)';
     }
 
     if (!formData.selectedUnit || formData.selectedUnit.trim() === '') {
@@ -145,7 +145,9 @@ const BookingUnit = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     placeholder='Your Name'
-                    className='form-input'
+                    className={`form-input ${
+                      errors.name ? 'input-error' : ''
+                    } `}
                   />
                   <div className='box-of-error'>
                     {errors.name && (
@@ -164,7 +166,9 @@ const BookingUnit = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder='Email'
-                    className='form-input'
+                    className={`form-input ${
+                      errors.email ? 'input-error' : ''
+                    } `}
                   />
                   <div className='box-of-error'>
                     {errors.email && (
@@ -182,7 +186,9 @@ const BookingUnit = () => {
                   name='selectedUnit'
                   value={formData.selectedUnit}
                   onChange={handleInputChange}
-                  className='form-input'
+                  className={`form-input ${
+                    errors.selectedUnit ? 'input-error' : ''
+                  } `}
                 >
                   <option value=''>Choose Unit</option>
                   {options.map((option) => (
@@ -210,7 +216,9 @@ const BookingUnit = () => {
                   value={formData.purpose}
                   onChange={handleInputChange}
                   placeholder='Describe your storage purpose so that we can match your request'
-                  className='form-message'
+                  className={`form-message ${
+                    errors.purpose ? 'input-error' : ''
+                  } `}
                 ></textarea>
                 <div className='box-of-error'>
                   {errors.purpose && (

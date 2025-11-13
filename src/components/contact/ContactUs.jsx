@@ -1,5 +1,5 @@
 import Button from '../Button';
-import image from '../../assets/contact-personalized.jpg';
+import image from '../../assets/contact-personalized.webp';
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -21,12 +21,19 @@ const ContactUs = () => {
     let error = '';
 
     if (name === 'name' && !/^[A-Öa-ö\s-]{2,}$/.test(value)) {
-      error = 'Must be at least 2 characters long, no numbers';
+      error = 'must be at least 2 characters long, no numbers';
     } else if (
       name === 'email' &&
       !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(value)
     ) {
-      error = 'Must be a valid email (eg. name@example.com)';
+      error = 'must be a valid email (eg. name@mail.com)';
+    } else if (
+      name === 'phoneNumber' &&
+      !/^(\+46|0)[\s-]*\d{2,3}[\s-]*\d{2,3}[\s-]*\d{2,3}[\s-]*\d{2,3}$/.test(
+        value
+      )
+    ) {
+      error = 'not a valid phone number';
     } else if (name === 'subject' && !/^[A-Öa-ö\s-]{2,}$/.test(value)) {
       error = 'Please select a unit';
     } else if (name === 'comment' && !/^[A-Öa-ö\s-]{2,}$/.test(value)) {
@@ -40,13 +47,21 @@ const ContactUs = () => {
     const newErrors = {};
 
     if (!/^[A-Öa-ö\s-]{2,}$/.test(formData.name)) {
-      newErrors.name = 'Must be at least 2 characters long, no numbers';
+      newErrors.name = 'must be at least 2 characters long, no numbers';
     }
 
     if (
       !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(formData.email)
     ) {
-      newErrors.email = 'Must be a valid email (eg. name@example.com)';
+      newErrors.email = 'must be a valid email (eg. name@mail.com)';
+    }
+
+    if (
+      /^(\+46|0)[\s-]*\d{2,3}[\s-]*\d{2,3}[\s-]*\d{2,3}[\s-]*\d{2,3}$/.test(
+        formData.phoneNumber
+      )
+    ) {
+      newErrors.phoneNumber = 'not a valid phone number';
     }
 
     if (!/^[A-Öa-ö\s-]{2,}$/.test(formData.subject)) {
@@ -139,7 +154,7 @@ const ContactUs = () => {
               placeholder='Your name'
               value={formData.name}
               onChange={handleInputChange}
-              className='form-input'
+              className={`form-input ${errors.name ? 'input-error' : ''} `}
             />
             <div className='box-of-error'>
               {errors.name && (
@@ -159,12 +174,12 @@ const ContactUs = () => {
                 placeholder='Email'
                 value={formData.email}
                 onChange={handleInputChange}
-                className='form-input'
+                className={`form-input ${errors.email ? 'input-error' : ''} `}
               />
             </div>
             <div className='form-row'>
               <label htmlFor='phoneNumber' className='form-label'>
-                telephone
+                telephone (optional)
               </label>
               <input
                 type='tel'
@@ -173,7 +188,9 @@ const ContactUs = () => {
                 placeholder='Telephone'
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
-                className='form-input'
+                className={`form-input ${
+                  errors.phoneNumber ? 'input-error' : ''
+                } `}
               />
             </div>
           </div>
@@ -182,7 +199,9 @@ const ContactUs = () => {
               <span className='validation-error'>{errors.email}</span>
             )}
             {errors.phoneNumber && (
-              <span className='validation-error'>{errors.phoneNumber}</span>
+              <span className='validation-error phone-error'>
+                {errors.phoneNumber}
+              </span>
             )}
           </div>
           <div className='form-row'>
@@ -196,7 +215,7 @@ const ContactUs = () => {
               placeholder='How can we help you?'
               value={formData.subject}
               onChange={handleInputChange}
-              className='form-input'
+              className={`form-input ${errors.subject ? 'input-error' : ''} `}
             />
             <div className='box-of-error'>
               {errors.subject && (
@@ -215,7 +234,7 @@ const ContactUs = () => {
               placeholder='Comments'
               value={formData.comment}
               onChange={handleInputChange}
-              className='form-message'
+              className={`form-message ${errors.comment ? 'input-error' : ''} `}
             ></textarea>
             <div className='box-of-error'>
               {errors.comment && (
