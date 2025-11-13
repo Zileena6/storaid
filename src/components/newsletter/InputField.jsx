@@ -1,9 +1,17 @@
-const InputField = ({ label, name, type, value, placeholder, onChange }) => {
+const InputField = ({
+  label,
+  name,
+  type,
+  value,
+  placeholder,
+  onChange,
+  error,
+}) => {
   return (
     <div className='input-container'>
       {label && <label htmlFor={name}>{label}</label>}
       <input
-        className='input-field'
+        className={`input-field ${error ? 'input-error' : ''} `}
         id={name}
         name={name}
         type={type}

@@ -1,7 +1,7 @@
 import { FaPhoneAlt } from 'react-icons/fa';
 import { IoMailOpen } from 'react-icons/io5';
 import SocialList from '../links/SocialList';
-import Logo from '../../assets/storaid-logo.png';
+import Logo from '../../assets/storaid-logo.webp';
 import NavLinks from '../links/NavLinks';
 import Button from '../Button';
 import { Link } from 'react-router-dom';

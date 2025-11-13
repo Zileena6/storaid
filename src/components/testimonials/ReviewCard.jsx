@@ -1,13 +1,13 @@
 import quotes from '../../assets/quotes.svg';
-import { MdStar } from 'react-icons/md';
+import { MdStar, MdStarOutline } from 'react-icons/md';
 
 const ReviewCard = ({ comment, rating, name, companyName, avatarUrl }) => {
   return (
     <div className='review-card'>
       <div>
         <div className='rating-stars'>
-          {Array.from({ length: rating }).map((_, i) => (
-            <MdStar key={i} />
+          {Array.from({ length: 5 }, (_, i) => (
+            <span key={i}> {i < rating ? <MdStar /> : <MdStarOutline />} </span>
           ))}
         </div>
 

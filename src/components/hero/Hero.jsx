@@ -1,5 +1,5 @@
 import Button from '../Button';
-import heroImage from '../../assets/hero-image.svg';
+import heroImage from '../../assets/hero-image.webp';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {

@@ -21,7 +21,7 @@ const Newsletter = () => {
       name === 'email' &&
       !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(value)
     ) {
-      error = 'Must be a valid email (eg. username@example.com)';
+      error = 'Must be a valid email (eg. name@mail.com)';
     }
 
     setErrors((prevErrors) => ({ ...prevErrors, [name]: error }));
@@ -33,7 +33,7 @@ const Newsletter = () => {
     if (
       !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(formData.email)
     ) {
-      newErrors.email = 'Must be a valid email (eg. username@example.com)';
+      newErrors.email = 'Must be a valid email (eg. name@mail.com)';
     }
 
     setErrors(newErrors);
@@ -99,7 +99,6 @@ const Newsletter = () => {
               action={''}
               onSubmit={handleSubmit}
               className='subscribe-container'
-              noValidate
             >
               <div className='input-group'>
                 <InputField
@@ -110,6 +109,7 @@ const Newsletter = () => {
                   placeholder={'Enter email'}
                   onChange={handleInputChange}
                   value={formData.email}
+                  error={errors.email}
                 />
                 <div className='box-of-error'>
                   {errors.email && (
