@@ -3,7 +3,7 @@ import Button from '../Button';
 import StatsCard from './StatsCard';
 import phone from '../../assets/phone-icon.svg';
 import { Link } from 'react-router-dom';
-import image from '../../assets/about-safe.jpg';
+import image from '../../assets/about-safe.webp';
 
 const AboutUs = () => {
   return (

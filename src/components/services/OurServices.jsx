@@ -1,5 +1,5 @@
 import Tiles from '../tiles/Tiles';
-import image from '../../assets/services-specialized.jpg';
+import image from '../../assets/services-specialized.webp';
 
 const OurServices = () => {
   return (

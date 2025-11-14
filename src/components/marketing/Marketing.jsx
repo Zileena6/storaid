@@ -1,5 +1,5 @@
 import IconBlock from '../marketing/IconBlock';
-import image from '../../assets/choose-exceptional.jpg';
+import image from '../../assets/choose-exceptional.webp';
 
 const Marketing = ({ variant = null }) => {
   return (
