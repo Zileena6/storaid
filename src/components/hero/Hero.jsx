@@ -20,7 +20,14 @@ const Hero = () => {
           </Link>
         </div>
         <div className='image-container'>
-          <img src={heroImage} alt='silhouette of a man' />
+          <img
+            fetchPriority='high'
+            loading='eager'
+            src={heroImage}
+            alt='silhouette of a man'
+            width={462}
+            height={534}
+          />
         </div>
       </div>
     </section>

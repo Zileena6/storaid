@@ -1,8 +1,8 @@
-import logo1 from '../assets/Logoipsum-1.svg';
-import logo2 from '../assets/Logoipsum-2.svg';
-import logo3 from '../assets/Logoipsum-3.svg';
-import logo4 from '../assets/Logoipsum-4.svg';
-import logo5 from '../assets/Logoipsum-5.svg';
+import logo1 from '../assets/Logoipsum-1.webp';
+import logo2 from '../assets/Logoipsum-2.webp';
+import logo3 from '../assets/Logoipsum-3.webp';
+import logo4 from '../assets/Logoipsum-4.webp';
+import logo5 from '../assets/Logoipsum-5.webp';
 
 const logos = [logo1, logo2, logo3, logo4, logo5];
 
