@@ -26,7 +26,10 @@ const AboutUs = () => {
           <Tiles ids={[1, 2]} />
         </div>
         <div className='discover-more'>
-          <Link to='/about'>
+          <Link
+            to='/about'
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
             <Button btnText={'Discover More'} />
           </Link>
           <div className='info-container'>

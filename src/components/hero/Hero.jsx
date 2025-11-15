@@ -15,7 +15,10 @@ const Hero = () => {
             lobortis, libero at iaculis luctus, nisi ex pellentesque nisi, at
             euismod sem ipsum ac dolor.
           </p>
-          <Link to='/services'>
+          <Link
+            to='/services'
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
             <Button btnText={'Discover More'} variant='dark-bg' />
           </Link>
         </div>

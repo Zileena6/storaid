@@ -8,10 +8,12 @@ import Booking from './pages/Booking';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import NotFound from './pages/NotFound';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
