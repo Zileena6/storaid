@@ -2,11 +2,17 @@
 
 # StorAid Storage Services 📦
 
-_**StorAid** offers secure, affordable storage solutions with easy online booking, flexible unit sizes, and reliable customer service for all your storage needs._
+**StorAid** _offers secure, affordable storage solutions with easy online booking, flexible unit sizes, and reliable customer service for all your storage needs._
 
-📦 📦 📦 📦 📦 📦 📦 📦 📦 📦
+<hr>
 
-### 📑 Table of content
+###### NOTE!
+
+_For better readability, view this using 'Markdown Preview Enhanced'._
+
+<hr>
+
+### 📑 Table of content:
 
 🧰 - [Tech stack](#-tech-stack)
 🌿 - [Branch naming](#-branch-naming-rules)
@@ -62,7 +68,7 @@ _**StorAid** offers secure, affordable storage solutions with easy online bookin
 
 In the CSS-file there are comments with "MARK:"; These are for developers, and should not be removed unless the section is removed completely. The "MARK:"-command makes it easier to find the CSS for the components/sections you're looking for.
 
-<!--
+<!-- (code for color palette-image)
 |     CSS variable | Color Name                                                                                                                           |         HEX / rgb         |
 | ---------------: | ------------------------------------------------------------------------------------------------------------------------------------ | :-----------------------: |
 |   **--primary:** | **<span style="color:#ffffff; background-color:rgba(18, 55, 42, 0.8); padding:8px 50px; border-radius: 25px">white</span>**          |          #FFFFFF          |
