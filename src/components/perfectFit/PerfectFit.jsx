@@ -14,7 +14,10 @@ const PerfectFit = () => {
           molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac
           blandit nisi non sodales augue. Phasellus eget elit gravida.
         </p>
-        <Link to='/booking'>
+        <Link
+          to='/booking'
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
           <Button btnText={'book now'} variant='dark-bg' />
         </Link>
       </div>

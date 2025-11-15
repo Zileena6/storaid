@@ -1043,6 +1043,10 @@ header {
       flex-direction: column;
       gap: 1.68rem;
 
+      .title {
+        background: var(--accent-3);
+      }
+
       .description {
         max-width: 32rem;
       }
@@ -1122,7 +1126,7 @@ header {
         &:hover,
         &.active {
           background-color: var(--accent);
-          color: var(--primary);
+          color: var(--accent-3);
           cursor: pointer;
         }
       }
@@ -1282,6 +1286,11 @@ footer {
         display: flex;
         align-items: center;
         gap: 0.56rem;
+        cursor: pointer;
+
+        &:hover {
+          color: var(--accent);
+        }
       }
     }
   }

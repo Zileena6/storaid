@@ -25,7 +25,10 @@ const Header = () => {
           <img src={Logo} alt='StorAid Company Logo' />
         </Link>
         <NavLinks />
-        <Link to='/booking'>
+        <Link
+          to='/booking'
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
           <Button btnText={'Book Now'} />
         </Link>
       </nav>
